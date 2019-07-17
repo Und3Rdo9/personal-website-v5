@@ -10,7 +10,9 @@
   "author": "Tim Bakkum",
   "license": "MIT",
   "devDependencies": {
-    "lerna": "^3.15.0"
+    "lerna": "^3.15.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0"
   },
   "scripts": {
     "develop": "yarn workspaces run develop"

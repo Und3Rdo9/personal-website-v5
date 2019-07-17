@@ -11,10 +11,12 @@
     "@types/storybook__react": "^4.0.2",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
+    "file-loader": "^4.0.0",
     "jest": "^24.8.0",
     "react-docgen-typescript-loader": "^3.1.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "url-loader": "^2.0.1"
   },
   "dependencies": {
     "@material-ui/core": "^4.2.0",
@@ -23,6 +25,7 @@
   },
   "scripts": {
     "develop": "start-storybook -p 6006 -c .storybook",
-    "storybook": "start-storybook -p 6006 -c .storybook"
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "build-static": "build-storybook -c .storybook -o build"
   }
 }

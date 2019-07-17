@@ -7,6 +7,9 @@ function loadStories() {
   req.keys().forEach(req);
 }
 
+// @TODO add notes decorator
+// @TODO add story source decorator
+
 addDecorator(CustomMuiTheme);
 
 configure(loadStories, module);
