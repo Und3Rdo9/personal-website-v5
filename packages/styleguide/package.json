@@ -5,18 +5,22 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.4",
+    "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-info": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/addon-notes": "^5.1.9",
+    "@storybook/addon-storysource": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@storybook/source-loader": "^5.2.0-alpha.14",
     "@types/jest": "^24.0.15",
     "@types/storybook__react": "^4.0.2",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "file-loader": "^4.0.0",
     "jest": "^24.8.0",
-    "react-docgen-typescript-loader": "^3.1.0",
     "ts-jest": "^24.0.2",
-    "typescript": "3.5.3",
-    "url-loader": "^2.0.1"
+    "typescript": "3.5.3"
   },
   "dependencies": {
     "@material-ui/core": "4.2.1",

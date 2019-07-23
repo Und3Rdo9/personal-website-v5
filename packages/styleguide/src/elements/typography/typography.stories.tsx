@@ -69,4 +69,11 @@ export default function Types() {
     </div>
   );
 }
-storiesOf('Elements/Typography', module).add('All Typography', () => <Types />);
+storiesOf('Elements/Typography', module).add(
+  'All Typography',
+  () => <Types />,
+  {
+    notes:
+      'All Typography. Partly inspired on a typographic scale of 1,5. Html font size is set to 18px so our main body text variant can be easily set. 1 spacing unit is .5rem.',
+  },
+);

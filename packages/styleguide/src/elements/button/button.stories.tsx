@@ -1,37 +1,77 @@
-import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import Button from "@material-ui/core/Button";
-import { ButtonGroup, Grid } from "@material-ui/core";
+import * as React from 'react';
+import { storiesOf } from '@storybook/react';
+import Button from '@material-ui/core/Button';
+import {
+  ButtonGroup,
+  Grid,
+  makeStyles,
+  createStyles,
+  Theme,
+  useTheme,
+} from '@material-ui/core';
 
-storiesOf("Element/Button", module)
-  .add("contained", () => (
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    button: {
+      margin: theme.spacing(3),
+    },
+    input: {
+      display: 'none',
+    },
+  }),
+);
+
+const SpacedButtons = () => {
+  const theme = useTheme();
+  const classes = useStyles(theme);
+
+  return (
     <div>
       <div>
-        <Button variant="contained">Default</Button>
+        <Button className={classes.button} variant="contained">
+          Default
+        </Button>
       </div>
       <div>
-        <Button variant="contained" color="primary">
+        <Button className={classes.button} variant="contained" color="primary">
           Primary
         </Button>
       </div>
       <div>
-        <Button variant="contained" color="secondary">
+        <Button
+          className={classes.button}
+          variant="contained"
+          color="secondary"
+        >
           Secondary
         </Button>
       </div>
       <div>
-        <Button variant="contained" color="secondary" disabled>
+        <Button
+          className={classes.button}
+          variant="contained"
+          color="secondary"
+          disabled
+        >
           Disabled
         </Button>
       </div>
       <div>
-        <Button variant="contained" href="#contained-buttons">
+        <Button
+          className={classes.button}
+          variant="contained"
+          href="#contained-buttons"
+        >
           Link
         </Button>
       </div>
     </div>
-  ))
-  .add("text", () => (
+  );
+};
+
+storiesOf('Elements/Button', module)
+  .add('contained', () => <SpacedButtons />)
+  .add('text', () => (
     <div>
       <div>
         <Button variant="text">Default</Button>
@@ -58,7 +98,7 @@ storiesOf("Element/Button", module)
       </div>
     </div>
   ))
-  .add("outlined", () => (
+  .add('outlined', () => (
     <div>
       <div>
         <Button variant="outlined">Default</Button>
@@ -85,7 +125,7 @@ storiesOf("Element/Button", module)
       </div>
     </div>
   ))
-  .add("grouped", () => (
+  .add('grouped', () => (
     <Grid container spacing={3}>
       <Grid item xs={12} md={6}>
         <Grid container spacing={1} direction="column" alignItems="center">
@@ -166,7 +206,7 @@ storiesOf("Element/Button", module)
       </Grid>
     </Grid>
   ))
-  .add("sizes", () => (
+  .add('sizes', () => (
     <div>
       <div>
         <Button size="small" variant="contained">
