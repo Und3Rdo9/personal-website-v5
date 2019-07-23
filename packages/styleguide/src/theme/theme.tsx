@@ -6,11 +6,15 @@ import { ThemeProvider } from '@material-ui/styles';
 import { StoryDecorator } from '@storybook/react';
 import fonts from './fonts';
 
+const spacingFn = (lines: number): string => `${0.5 * lines}rem`;
+
 // @TODO clean up config into seperate files?
 export const theme = createMuiTheme({
   shape: {
     borderRadius: 0,
   },
+  // @TODO typecast is needed as bugfix to typedefs will be merged soon, see: https://github.com/mui-org/material-ui/pull/16624
+  spacing: spacingFn as any,
   palette: {
     primary: {
       light: '#FFF59D',
@@ -130,7 +134,7 @@ export const theme = createMuiTheme({
     },
     MuiTypography: {
       gutterBottom: {
-        marginBottom: '1.5rem',
+        marginBottom: spacingFn(3),
       },
     },
   },
