@@ -8,7 +8,7 @@ export interface CustomAppBarProps {
 
 export const CustomAppBar = ({ handleMenuToggle }: CustomAppBarProps) => {
   return (
-    <AppBar position="fixed">
+    <AppBar position="sticky">
       <Toolbar>
         <IconButton
           edge="start"
