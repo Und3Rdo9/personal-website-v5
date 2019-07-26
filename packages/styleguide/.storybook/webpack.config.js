@@ -39,6 +39,26 @@ module.exports = ({ config }) => {
         },
       },
     },
+    {
+      test: /\.svg$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]?hash=[hash:8]',
+        },
+      },
+    },
+    {
+      test: /\.(png|jpg|jpeg)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'images/[name].[ext]?hash=[hash:8]',
+          },
+        },
+      ],
+    },
   );
   config.resolve.extensions.push('.ts', '.tsx');
   return config;
