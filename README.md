@@ -14,3 +14,11 @@ To see the current structure of the workspaces/packages: run `yarn workspaces in
 ## Publishing and versioning
 
 We use Lerna for publishing our different packages to the appropriate location. More info once this feature has been developed.
+
+## Linting & formatting
+
+We use ESLint with plugins for TypeScript, React and Prettier support. For a good developer experience, it's useful to setup your editor to automatically run ESLint fix command whenever you save a file. If you open this project as a VSCode workspace, it will automatically configure this using the settings in `.vscode/settings.json`
+
+Code formatting will happen automatically using prettier.
+
+Linting and formatting can be customized by extending the base config in each individual package.

@@ -10,7 +10,7 @@ import {
 import { MenuLinkData, MenuLink } from './menu-link';
 
 // @TODO this can be globally defined in theme?
-const drawerWidth: number = 320;
+const drawerWidth = 320;
 
 // @TODO refactor into func comp that takes a set of route props
 const drawerContents = <p>Im the drawer contents yo!</p>;

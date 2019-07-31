@@ -1,10 +1,10 @@
 import React from 'react';
 import { ListItem } from '@material-ui/core';
 
-export type MenuLinkData = {
+export interface MenuLinkData {
   link: string;
   name: string;
-};
+}
 
 export interface MenuLinkProps {
   data: MenuLinkData;

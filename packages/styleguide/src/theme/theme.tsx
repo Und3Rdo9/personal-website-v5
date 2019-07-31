@@ -14,6 +14,7 @@ export const theme = createMuiTheme({
     borderRadius: 0,
   },
   // @TODO typecast is needed as bugfix to typedefs will be merged soon, see: https://github.com/mui-org/material-ui/pull/16624
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   spacing: spacingFn as any,
   palette: {
     primary: {
@@ -123,17 +124,46 @@ export const theme = createMuiTheme({
       textTransform: 'uppercase',
     },
   },
+  props: {
+    MuiLink: {
+      color: 'secondary',
+      underline: 'always',
+    },
+  },
   overrides: {
     MuiCssBaseline: {
       '@global': {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         '@font-face': [...fonts] as any,
         html: {
           fontSize: '112.5%',
         },
       },
     },
+
     MuiTypography: {
       gutterBottom: {
+        marginBottom: spacingFn(3),
+      },
+      h1: {
+        marginTop: spacingFn(3),
+      },
+      h2: {
+        marginTop: spacingFn(3),
+      },
+      h3: {
+        marginTop: spacingFn(3),
+      },
+      h4: {
+        marginTop: spacingFn(3),
+      },
+      h5: {
+        marginTop: spacingFn(3),
+      },
+      h6: {
+        marginTop: spacingFn(3),
+      },
+      paragraph: {
         marginBottom: spacingFn(3),
       },
     },
