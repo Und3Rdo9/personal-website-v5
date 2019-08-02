@@ -53,10 +53,9 @@ jobs:
       #       tar -xz -C /tmp -f /tmp/docker-$VER.tgz
       #       mv /tmp/docker/* /usr/bin
 
-      - run: echo 'export CHANGED_PACKAGES=`yarn lerna changed`' >> $BASH_ENV
-      - run: echo $CHANGED_PACKAGES
+      - run: echo 'export LAST_TAG=`git describe --abbrev=0 --tags`' >> $BASH_ENV
+      - run: echo $LAST_TAG
 
-      - run: yarn lerna run ci:deploy --since master
+      - run: yarn lerna run ci:deploy --since $LAST_TAG
 
       - run: yarn new-version
-      - run: git tag
