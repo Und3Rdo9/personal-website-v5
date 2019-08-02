@@ -2,5 +2,12 @@
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "version": "0.0.0"
+  "version": "independent",
+  "command": {
+    "version": {
+      "conventional-commits": true,
+      "yes": true,
+      "message": "chore(release): publish %s [skip-ci]"
+    }
+  }
 }

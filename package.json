@@ -13,6 +13,7 @@
     "lerna": "^3.15.0"
   },
   "scripts": {
-    "develop": "lerna run develop --parallel"
+    "develop": "lerna run develop --parallel",
+    "new-version": "lerna version --conventional-commits --yes"
   }
 }
