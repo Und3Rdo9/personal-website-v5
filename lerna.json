@@ -5,7 +5,9 @@
   "version": "independent",
   "command": {
     "version": {
-      "conventional-commits": true
+      "conventional-commits": true,
+      "yes": true,
+      "message": "chore(release): publish %s [skip ci]"
     }
   }
 }

@@ -1,6 +1,5 @@
 [build]
   command = "yarn build-static"
-  functions = "functions"
   publish = "build"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app. 

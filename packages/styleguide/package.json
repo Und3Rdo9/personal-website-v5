@@ -49,6 +49,6 @@
     "format": "prettier --write '{__mocks__,src,test}/**/*.{js,ts,tsx}'",
     "lint": "eslint src --ext .tsx",
     "lint:fix": "yarn run lint --fix",
-    "ci:deploy": "netlify deploy -p -m \"$(git log -1 --pretty=%B)\""
+    "ci:deploy": "yarn run build-static && netlify deploy -p -m \"$(git log -1 --pretty=%B)\""
   }
 }
