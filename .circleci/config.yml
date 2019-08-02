@@ -41,8 +41,6 @@ jobs:
       - run: git config --global user.email $GITHUB_EMAIL
       - run: git config --global user.name $GITHUB_USER
 
-      - run: yarn new-version
-
       # - setup_remote_docker:
       #     docker_layer_caching: true
 
@@ -55,7 +53,8 @@ jobs:
       #       tar -xz -C /tmp -f /tmp/docker-$VER.tgz
       #       mv /tmp/docker/* /usr/bin
 
+      - run: echo 'export CHANGED_PACKAGES=`lerna changed`' >> $BASH_ENV
+      - run: echo $CHANGED_PACKAGES
+      - run: yarn new-version
       - run: git tag
-      - run: echo 'export TAG=`git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2) | sed -n 2p`' >> $BASH_ENV
-      - run: echo $TAG
-      - run: yarn ci:deploy
+      - run: yarn lerna run ci:deploy --since master
