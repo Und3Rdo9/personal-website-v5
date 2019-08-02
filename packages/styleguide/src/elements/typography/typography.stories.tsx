@@ -37,7 +37,7 @@ export default function Types() {
       <Typography variant="h6" gutterBottom>
         h6. Heading
       </Typography>
-      <Typography variant="subtitle1" gutterBottom>
+      <Typography variant="subtitle1" gutterBottom paragraph>
         subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Quos blanditiis tenetur
       </Typography>

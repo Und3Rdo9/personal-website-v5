@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       marginBottom: theme.spacing(1.5),
+      marginTop: '0',
     },
   }),
 );
