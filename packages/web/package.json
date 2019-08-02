@@ -65,7 +65,7 @@
     "lint:fix": "yarn run lint --fix",
     "start": "concurrently \"gatsby develop\" \"yarn run codegen\"",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "ci:deploy": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "codegen": "graphql-codegen --config graphql-codegen.yml"
   },
   "lint-staged": {
