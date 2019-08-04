@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/Und3Rdo9/personal-website-v5/compare/@tim/web@0.2.2...@tim/web@0.2.3) (2019-08-04)
+
+**Note:** Version bump only for package @tim/web
+
+
+
+
+
 ## [0.2.2](https://github.com/Und3Rdo9/personal-website-v5/compare/@tim/web@0.2.1...@tim/web@0.2.2) (2019-08-04)
 
 **Note:** Version bump only for package @tim/web
