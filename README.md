@@ -13,7 +13,7 @@ To see the current structure of the workspaces/packages: run `yarn workspaces in
 
 ## Publishing and versioning
 
-We use Lerna for publishing our different packages to the appropriate location. More info once this feature has been developed.
+We use Lerna for publishing our different packages to the appropriate location. Each pull request that gets merged into master, will trigger our CircleCI workflow. Lerna allows us to only test, build and deploy our changed packages and automatically version our code on github. Using conventional commits, lerna is able to determine what type of version increment to do. 
 
 ## Linting & formatting
 
