@@ -1,7 +1,7 @@
 {
   "name": "@tim/web",
   "description": "A Gatsby starter with typesafe GraphQL using TypeScript",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Tim Bakkum <timbakkum@gmail.com>",
   "dependencies": {
     "@material-ui/core": "4.2.1",
